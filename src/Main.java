@@ -1,13 +1,15 @@
 public class Main {
 
     public static void main(String[] args) {
-        Book AtTheMountainsOfMadness = new Book(" Говарда Лавкрафта", "Хребет безумия.", 1936);
-        AtTheMountainsOfMadness.printBook();
-        System.out.println("Полное имя автора: " + AtTheMountainsOfMadness.setAuthorName("Говарда Филлипса Лавкрафта"));
-        Book NineteenEightyFour = new Book("Джордж Оруэлл", "1984.",1949);
-        NineteenEightyFour.printBook();
-        System.out.println("Имя автора: " + NineteenEightyFour.setAuthorName("Джордж Оруэлл"));
 
+        Author author = new Author("Говарда", "Лавкрафта");
+        Book theMountainsOfMadness = new Book( author,"Хребет безумия.", 1936);
+        System.out.println("Автор: " + author.foolAuthor());
+        System.out.println("Автор: " + theMountainsOfMadness.getAuthorName().foolAuthor() + " Название книги: " + theMountainsOfMadness.getBookName() + " Изданна в: " + theMountainsOfMadness.getPublishingYear());
+        Author author1 = new Author("Джордж", "Оруэлл");
+        Book nineteenEightyFour = new Book( author1, "1984.",1949);
+        System.out.println("Автор: " + author1.foolAuthor());
+        System.out.println("Автор: " + nineteenEightyFour.getAuthorName().foolAuthor() + " Название книги: " + nineteenEightyFour.getBookName() + " Изданна в: " + nineteenEightyFour.getPublishingYear());
 
     }
 }
