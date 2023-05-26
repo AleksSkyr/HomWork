@@ -15,14 +15,23 @@ public class Book {
     }
 
     public String getAuthorName() {
-        return this.authorName;
+        this.authorName = authorName;
+        return null;
+    }
+    public String setAuthorName(String authorName) {
+        return authorName;
     }
 
-    public String getPublishingYear() {
-        return this.authorName;
+    public int getPublishingYear() {
+       this.publishingYear = publishingYear;
+        return(0);
     }
 
-    public void setPublishingYear(int publishingYear) {
-        this.publishingYear = publishingYear;
+    public int setPublishingYear(int publishingYear) {
+        return publishingYear;
+    }
+
+    void printBook() {
+        System.out.println("Автор: " + getAuthorName() + " Название книги: " + getBookName() + " Изданна в: " + getPublishingYear());
     }
 }
