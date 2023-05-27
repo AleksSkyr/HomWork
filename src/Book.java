@@ -1,10 +1,10 @@
 public class Book {
-    private Author authorName;
-    private String bookName;
-    private int publishingYear;
+    public Author author;
+    public String bookName;
+    public int publishingYear;
 
     public Book(Author author, String book, int year) {
-        this.authorName = author;
+        this.author = author;
         this.bookName = book;
         this.publishingYear = year;
 
@@ -14,15 +14,22 @@ public class Book {
         return this.bookName;
     }
 
-    public Author getAuthorName() {
-        return this.authorName;
-    }
-    public String setAuthorName(String authorName) {
-        return authorName;
+    public Author getAuthor() {
+        return this.author;
     }
 
     public int getPublishingYear() {
         return this.publishingYear;
     }
 
+    public int setPublishingYear(int year) {
+        return this.publishingYear = year;
+
+    }
+
+
+    void printBook() {
+        System.out.println("Автор: " + getAuthor() + " Название книги: " + getBookName() + " Изданна в: " + getPublishingYear());
+
+    }
 }
